@@ -117,7 +117,45 @@
   --color-header: var(--color-primary-blue);
   --color-footer: var(--color-primary-blue);
   /********************************************** End Tokens **********************************************/
+
+  /* Text */
+  --font-family-onsite-condensed-bold: "OnsiteCondensedTRIAL-Bold", sans-serif;
+  --font-family-onsite-condensed-light: "OnsiteCondensedTRIAL-Light", sans-serif;
 }
+
+/********************************************** Start Fonts **********************************************/
+/* Heading */
+@font-face {
+  font-family: "GesturaTextTRIAL-Regular";
+  src: url("/font/GesturaTextTRIAL-Regular.otf") format("truetype");
+}
+
+@font-face {
+  font-family: "GesturaTextTRIAL-Thin";
+  src: url("/font/GesturaTextTRIAL-Thin.otf") format("truetype");
+}
+
+@font-face {
+  font-family: "OnsiteExtendedTRIAL-Bold";
+  src: url("/font/OnsiteExtendedTRIAL-Bold.otf") format("truetype");
+}
+
+@font-face {
+  font-family: "OnsiteExtendedTRIAL-Regular";
+  src: url("/font/OnsiteExtendedTRIAL-Regular.otf") format("truetype");
+}
+
+/* Text */
+@font-face {
+  font-family: "OnsiteCondensedTRIAL-Bold";
+  src: url("/font/OnsiteCondensedTRIAL-Bold.otf") format("truetype");
+}
+
+@font-face {
+  font-family: "OnsiteCondensedTRIAL-Light";
+  src: url("/font/OnsiteCondensedTRIAL-Light.otf") format("truetype");
+}
+/********************************************** End Fonts **********************************************/
 
 @layer base {
   *,
