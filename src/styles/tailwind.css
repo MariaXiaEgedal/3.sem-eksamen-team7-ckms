@@ -133,6 +133,10 @@
   --spacing-m: 50px;
   --spacing-l: 100px;
   --spacing-xl: 150px;
+
+  /* Border Radius */
+  --radius-s: 25px;
+  --radius-l: 50px;
 }
 
 /********************************************** Start Fonts **********************************************/
@@ -184,6 +188,9 @@
   ::backdrop,
   ::file-selector-button {
     border-color: var(--color-gray-200, currentColor);
+  }
+  .spacinglarge {
+    @apply m-l lg:m-xl;
   }
 }
 
