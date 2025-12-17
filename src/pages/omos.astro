@@ -56,7 +56,7 @@ const teamMembers = [
         Om os
       </Heading>
 
-      <div class="grid grid-cols-4 md:grid-cols-12 gap-2xs">
+      <div class="grid grid-cols-4 md:grid-cols-12 mt-xs gap-2xs">
         <div class="col-span-4 md:col-span-6">
           <Text class="text-text-dark">
             Nationalt Center for Kunst og Mental Sundhed er et forskningsbaseret
@@ -75,33 +75,31 @@ const teamMembers = [
             tjener deltagerne. Vores forskning er vigtig, men det er mennesket
             med levet erfaring, der er i centrum.
           </Text>
-          <ul class="space-y-3 ml-5 list-disc">
+          <ul class="space-y-3 ml-5 list-disc mt-xs">
             <li>
               <Text stylingclasses="text-text-dark">
                 Grupperne er deltagerfokuserede kunstworkshops, ikke
                 kunstterapi.
               </Text>
-              <ul class="space-y-3 ml-5 list-disc mt-3">
-                <li>
-                  <Text stylingclasses="text-text-dark">
-                    Fokus er på form frem for indhold.
-                  </Text>
-                </li>
-                <li>
-                  <Text stylingclasses="text-text-dark">
-                    Et trygt kunstnerisk rum der kan skabe leg, fællesskab og
-                    være helende i sig selv.
-                  </Text>
-                </li>
-              </ul>
+            </li>
+            <li>
+              <Text stylingclasses="text-text-dark">
+                Fokus er på form frem for indhold.
+              </Text>
+            </li>
+            <li>
+              <Text stylingclasses="text-text-dark">
+                Et trygt kunstnerisk rum der kan skabe leg, fællesskab og være
+                helende i sig selv.
+              </Text>
             </li>
           </ul>
         </div>
         <div class="col-span-4 md:col-span-6 flex items-start">
           <img
-            src="public/img/omosbillede1.png"
+            src="public/img/omosbillede1.svg"
             alt="Workshop deltagere"
-            class="w-full h-auto"
+            class="w-full h-auto rounded-tr-s md:rounded-tr-l"
           />
         </div>
       </div>
@@ -110,7 +108,6 @@ const teamMembers = [
     <!-- ***************************** Start Anden række Om os ***************************** -->
     <section
       class="col-span-4 md:col-span-12 grid grid-cols-4 md:grid-cols-12 mx-2xs md:mx-l"
-      style=""
     >
       <div class="col-span-4 md:col-span-6 flex items-center justify-center">
         <img
@@ -120,8 +117,7 @@ const teamMembers = [
         />
       </div>
       <div
-        class="col-span-4 md:col-span-6 flex flex-col justify-center space-y-6 p-xs bg-background-v2"
-        style="border-radius: 50px 0 50px 0;"
+        class="rounded-tl-s md:rounded-tl-l; rounded-br-s md:rounded-br-l; col-span-4 md:col-span-6 flex flex-col justify-center space-y-6 p-xs bg-background-v2 mt-xs md:mt-0"
       >
         <Text class="text-text-dark">
           Vi udvikler kunstneriske workshopformater baseret på international
@@ -201,54 +197,55 @@ const teamMembers = [
               co-terapeut, og forløbet følger best practice inden for
               gruppeterapi. Vi har desuden udviklet et manualiseret
               deltagerfokuseret kunstworkshop-koncept, som
-              <Text teksttype="brødtekstbold">udgives på forlaget Klim.</Text>
+              <strong class="font-bold">udgives på forlaget Klim.</strong>
             </Text>
           </div>
         </div>
 
         <!-- Sources Button -->
-        <button
-          class="border-2 border-text-dark p-3xs flex items-center mx-2xs md:mx-l"
-          type="button"
-          aria-expanded="false"
-        >
-          <div>
-            <Heading htmlheading="h4" size="xsmall" class="text-text-dark">
-              Kilder
-            </Heading>
-          </div>
-          <img
-            src="/img/pilned.svg"
-            alt="Åbn"
-            class="w-8 h-8 transition-transform duration-300 dropdown-arrow"
-          />
-        </button>
+        <div class="mx-2xs md:mx-l mb-m">
+          <button
+            class="w-full border-2 border-text-dark p-3xs flex items-center justify-between"
+            type="button"
+            aria-expanded="false"
+          >
+            <div>
+              <Heading htmlheading="h4" size="xsmall" class="text-text-dark">
+                Kilder
+              </Heading>
+            </div>
+            <img
+              src="/img/pilned.svg"
+              alt="Åbn"
+              class="w-8 h-8 transition-transform duration-300 dropdown-arrow"
+            />
+          </button>
 
-        <!-- Sources List (Hidden by default) -->
-        <div
-          class="sources-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out border-l-2 border-r-2 border-b-2 border-text-dark mx-2xs md:mx-l"
-        >
-          <div class="py-8 space-y-6 px-4">
-            <Text class="text-text-dark">
-              Boal, A. (1979). Theatre of the Oppressed. Pluto Press.
-            </Text>
-            <Text class="text-text-dark">
-              Prinzhorn, H. (1922). Artistry of the Mentally Ill.
-              Springer-Verlag.
-            </Text>
-            <Text class="text-text-dark">
-              Foucault, M. (1961). Madness and Civilization. Pantheon Books.
-            </Text>
-            <Text class="text-text-dark">
-              Csikszentmihalyi, M., & Selega Csikszentmihalyi, I. (1988).
-              Optimal Experience: Psychological Studies of Flow in
-              Consciousness. Cambridge University Press.
-            </Text>
+          <!-- Sources List (Hidden by default) -->
+          <div
+            class="sources-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out border-l-2 border-r-2 border-b-2 border-text-dark"
+          >
+            <div class="py-8 space-y-6 px-4">
+              <Text class="text-text-dark">
+                Boal, A. (1979). Theatre of the Oppressed. Pluto Press.
+              </Text>
+              <Text class="text-text-dark">
+                Prinzhorn, H. (1922). Artistry of the Mentally Ill.
+                Springer-Verlag.
+              </Text>
+              <Text class="text-text-dark">
+                Foucault, M. (1961). Madness and Civilization. Pantheon Books.
+              </Text>
+              <Text class="text-text-dark">
+                Csikszentmihalyi, M., & Selega Csikszentmihalyi, I. (1988).
+                Optimal Experience: Psychological Studies of Flow in
+                Consciousness. Cambridge University Press.
+              </Text>
+            </div>
           </div>
         </div>
       </div>
     </section>
-    <!-- ***************************** End Kunst og psykiatri ***************************** -->
 
     <!-- ***************************** Start Aktivitetsteamet ***************************** -->
     <section class="col-span-4 md:col-span-12">
@@ -309,8 +306,7 @@ const teamMembers = [
     >
       <!-- Pink box  -->
       <div
-        class="col-span-4 md:col-span-6 bg-background-v3 p-2xs md:p-xs"
-        style="border-radius: 0 50px 0 50px;"
+        class="rounded-tr-s md:rounded-tr-l rounded-bl-s md:rounded-bl-l col-span-4 md:col-span-6 bg-background-v3 p-2xs md:p-xs"
       >
         <Heading htmlheading="h3" size="small" class="text-text-dark">
           Vi glæder os til at høre fra dig!
@@ -799,13 +795,13 @@ const teamMembers = [
               </div>
             </div>
 
-            <!-- Full-width buttons below list -->
+            <!-- Buttons centered under each column -->
             <div class="col-span-4 md:col-span-12 mt-12">
               <div class="grid grid-cols-4 md:grid-cols-12">
-                <div
-                  class="col-span-4 md:col-span-10 md:col-start-2 flex flex-col md:flex-row items-center justify-center gap-4 md:gap-6 md:max-w-3xl mx-auto"
-                >
+                <div class="col-span-4 md:col-span-6 flex justify-center mb-m">
                   <Button>Se medlemmer af bestyrelsen</Button>
+                </div>
+                <div class="col-span-4 md:col-span-6 flex justify-center mb-m">
                   <Button>Læs vedtægter</Button>
                 </div>
               </div>
