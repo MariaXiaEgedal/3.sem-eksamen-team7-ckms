@@ -6,13 +6,13 @@ import { Image } from "astro:assets";
 import thumbsup from "../assets/images/thumbsup.png";
 import Heading from "../components/Heading.astro";
 import Text from "../components/Text.astro";
-// import Formular from "../components/Formular.astro";
+import Formular from "../components/Formular.astro";
 ---
 
 <MainLayout title="Hjælp til">
-  <div>
+  <div class="flex flex-col gap-m md:gap-xl my-m md:my-xl">
     <!-- ***************************** Start Støt vores formål og arbejde ***************************** -->
-    <section class="px-2xs md:px-l py-xs md:py-m">
+    <section class="mx-2xs md:mx-l">
       <!-- Tekst (venstre) -->
       <Heading
         htmlheading="h1"
@@ -22,10 +22,8 @@ import Text from "../components/Text.astro";
         Støt vores formål og arbejde
       </Heading>
 
-      <div class="md:grid md:grid-cols-12 md:gap-x-2xs">
-        <!-- <Formular /> -->
-
-        <div class="md:col-start-1 md:col-span-6">
+      <div class="lg:grid lg:grid-cols-12 md:gap-x-2xs">
+        <div class="md:col-span-6 lg:self-center">
           <Text teksttype="brødtekst" stylingclasses="text-text-dark mb-xs">
             Meld dig ind i Foreningen Kunst og Mental Sundhed og vær med til at
             støtte centrets formål og arbejdet med at bidrage til større
@@ -38,10 +36,9 @@ import Text from "../components/Text.astro";
           </Text>
         </div>
 
-        <!-- Her kan du senere indsætte formular-komponenten (højre) -->
-        <!-- <div class="md:col-start-7 md:col-span-6">
-          <DonationForm />
-        </div> -->
+        <div class="md:col-start-7 md:col-span-6 flex justify-center">
+          <Formular />
+        </div>
       </div>
     </section>
     <!-- ***************************** End Støt vores formål og arbejde ***************************** -->
@@ -124,7 +121,7 @@ import Text from "../components/Text.astro";
 
     <!-- ***************************** Start Samarbejder & Partnerskaber ***************************** -->
     <section class="px-2xs md:px-l py-xs md:py-m md:mb-l mb:xs">
-      <div class="md:grid md:grid-cols-12 md:gap-x-2xs">
+      <div class="lg:grid lg:grid-cols-12 md:gap-x-2xs">
         <!-- Venstre (overskrift) -->
         <div class="md:col-start-1 md:col-span-6">
           <Heading
