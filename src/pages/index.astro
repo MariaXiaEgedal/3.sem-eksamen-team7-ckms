@@ -282,7 +282,7 @@ import NewsCard from "../components/NewsCard.astro";
       </Heading>
 
       <!-- Mobile/tablet: carousel under lg -->
-      <div class="lg:hidden">
+      <div class="lg:hidden mb-xs">
         <div class="carousel w-full gap-2xs">
           <div class="carousel-item w-2/3">
             <NewsCard
@@ -318,7 +318,7 @@ import NewsCard from "../components/NewsCard.astro";
       </div>
 
       <!-- Desktop: grid on lg and up -->
-      <div class="hidden lg:grid grid-cols-3 gap-2xs">
+      <div class="hidden lg:grid grid-cols-3 gap-2xs mb-m">
         <NewsCard
           date="5. DECEMBER"
           title="Symposium for kunstnere og co-terapeuter"
@@ -345,6 +345,10 @@ import NewsCard from "../components/NewsCard.astro";
           imageAlt="Folk sidder sammen til workshop"
           linkText="Læs mere"
         />
+      </div>
+
+      <div class="flex justify-center">
+        <Button>Se flere nyheder</Button>
       </div>
     </section>
     <!-- ***************************** End Nyt fra CKMS ***************************** -->
