@@ -108,10 +108,7 @@ const decemberCells: CalendarCell[] = [
       >
         {
           decemberCells.map((cell, idx) => (
-            <div
-              class="border-r-2 border-b-2 border-text-dark overflow-hidden"
-              style="aspect-ratio: 3 / 4;"
-            >
+            <div class="border-r-2 border-b-2 border-text-dark overflow-hidden aspect-[3/4]">
               {cell ? (
                 <button
                   class="h-full w-full text-left "
@@ -141,7 +138,7 @@ const decemberCells: CalendarCell[] = [
         class="w-full border-2 border-text-dark overflow-hidden transition-all duration-300 md:hidden"
         id="mobile-day-detail"
         data-detail-panel
-        style="max-height: 0;"
+        class="w-full border-2 border-text-dark overflow-hidden transition-all duration-300 md:hidden max-h-0"
       >
         <div class="p-2xs md:p-2xs overflow-y-auto">
           <div class="flex items-center justify-between mb-m">
@@ -177,8 +174,290 @@ const decemberCells: CalendarCell[] = [
   <!-- ***************************** End Nyt fra CKMS ***************************** -->
 
   <!-- ***************************** Start Udstillinger ***************************** -->
-  <section class="bg-background-v4">
-    <p>Udstillinger</p>
+  <section>
+    <div class="mx-2xs md:mx-l mb-xs md:mb-s">
+      <Heading htmlheading="h2" size="medium" stylingclasses="text-text-dark">
+        Udstillinger
+      </Heading>
+    </div>
+
+    <div class="flex items-center justify-between px-2xs md:px-0 mb-2xs">
+      <button
+        id="aktivitet-prev"
+        class="nav-button w-[50px] h-[50px]"
+        aria-label="Forrige"
+      >
+        <img src="/img/pilleft.svg" alt="Forrige" class="w-full h-full" />
+      </button>
+      <button
+        id="aktivitet-next"
+        class="nav-button w-[50px] h-[50px]"
+        aria-label="Næste"
+      >
+        <img src="/img/pilright.svg" alt="Næste" class="w-full h-full" />
+      </button>
+    </div>
+
+    <div
+      class="overflow-x-auto snap-x snap-mandatory flex gap-xs"
+      id="udstillinger-carousel"
+    >
+      <!-- Card 1 -->
+      <article
+        class="min-w-[90%] md:min-w-[80%] snap-start bg-udstilling-1-card text-text-light px-2xs md:px-s py-2xs md:py-s space-y-s"
+      >
+        <!-- Top heading -->
+        <div>
+          <Heading
+            htmlheading="h3"
+            size="large"
+            stylingclasses="text-text-light"
+          >
+            are you mad yet?
+          </Heading>
+        </div>
+
+        <!-- Two-column content: left text, right main image -->
+        <div class="grid gap-s lg:grid-cols-2 items-start">
+          <div class="space-y-xs md:space-y-s">
+            <Text teksttype="brødtekst" stylingclasses="text-text-light">
+              are you mad yet? kaster lys på de økonomiske reformer, som rammer
+              de syge i vores samfund. Udstillingen fungerer som skole for en ny
+              form for psykoedukation. Psykoedukation er læren om egen psyke, og
+              indgår i psykiatrisk behandling. I denne skole flyttes fokus
+            </Text>
+          </div>
+          <div class="w-full h-[200px] md:h-[230px] lg:h-[250px]">
+            <img
+              src="/img/udstilling1.webp"
+              alt="Are you mad yet? udstilling"
+              class="w-full h-full object-cover"
+              loading="lazy"
+            />
+          </div>
+        </div>
+
+        <!-- Bottom row: four square thumbnails (desktop only) -->
+        <div class="hidden md:grid md:grid-cols-4 gap-2xs md:gap-xs">
+          <div class="w-full aspect-square">
+            <img
+              src="/img/instagram1.png"
+              alt="Are you mad yet? detalje 1"
+              class="w-full h-full object-cover"
+              loading="lazy"
+            />
+          </div>
+          <div class="w-full aspect-square">
+            <img
+              src="/img/instagram2.png"
+              alt="Are you mad yet? detalje 2"
+              class="w-full h-full object-cover"
+              loading="lazy"
+            />
+          </div>
+          <div class="w-full aspect-square">
+            <img
+              src="/img/instagram3.png"
+              alt="Are you mad yet? detalje 3"
+              class="w-full h-full object-cover"
+              loading="lazy"
+            />
+          </div>
+          <div class="w-full aspect-square">
+            <img
+              src="/img/instagram4.png"
+              alt="Are you mad yet? detalje 4"
+              class="w-full h-full object-cover"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 2 -->
+      <article
+        class="min-w-[90%] md:min-w-[80%] snap-start bg-udstilling-2-card text-text-light px-2xs md:px-s py-2xs md:py-s space-y-s"
+      >
+        <!-- Top heading -->
+        <div>
+          <Heading
+            htmlheading="h3"
+            size="large"
+            stylingclasses="text-text-light"
+          >
+            Bobbi Johanne-Østervang
+          </Heading>
+        </div>
+
+        <!-- Two-column content: left image, right text -->
+        <div class="grid gap-s lg:grid-cols-2 items-start">
+          <div class="w-full h-[200px] md:h-[230px] lg:h-[250px]">
+            <img
+              src="/img/udstilling2.webp"
+              alt="Bobbi Johanne-Østervang værk"
+              class="w-full h-full object-cover"
+              loading="lazy"
+            />
+          </div>
+          <div class="space-y-xs md:space-y-s">
+            <Heading
+              htmlheading="h4"
+              size="xsmall"
+              stylingclasses="text-text-light"
+            >
+              De Har Aftaler
+            </Heading>
+            <Text
+              teksttype="brødtekst"
+              stylingclasses="text-text-light max-w-[560px]"
+            >
+              De Har Aftaler undersøger det mentale rod, der kan opstå under og
+              efter sygdom. Små væsener bevæger sig gennem kognitionens lag og
+              forstyrrer hverdagens strukturer som “kognitive dæmoner”.
+              Udstillingen bygger på kunstnerens egne erfaringer med
+              psykoedukation og kritiserer systemer, der gør psykisk sygdom til
+              et individuelt ansvar.
+            </Text>
+          </div>
+        </div>
+
+        <!-- Bottom row: full-width supporting text (desktop only) -->
+        <div class="hidden md:block">
+          <Text teksttype="brødtekst" stylingclasses="text-text-light">
+            Den omfatter malerier og en kunstpublikation, som også findes som
+            lydbog. Lydspor og poetiske fortolkninger af Anna Rieder kan opleves
+            via QR-koder og senere her på siden.
+          </Text>
+        </div>
+      </article>
+
+      <!-- Card 3 -->
+      <article
+        class="min-w-[90%] md:min-w-[80%] snap-start bg-udstilling-3-card text-text-dark px-2xs md:px-s py-2xs md:py-s space-y-s"
+      >
+        <!-- Top heading -->
+        <div>
+          <Heading
+            htmlheading="h3"
+            size="large"
+            stylingclasses="text-text-dark"
+          >
+            M / Other (2021)
+          </Heading>
+        </div>
+
+        <!-- Two-column content: left text, right image -->
+        <div class="grid gap-s lg:grid-cols-2 items-start">
+          <div class="space-y-xs md:space-y-s">
+            <Text
+              teksttype="brødtekst"
+              stylingclasses="text-text-dark max-w-[620px]"
+            >
+              M / Other (2021) var CKMS’ første udstilling, hvor
+              samtidskunstnere undersøgte moderskab gennem en interaktiv
+              kunstinstallation. Udstillingen skabte et kurateret møde mellem
+              værker om sorg og omsorg, sårbarhed og solidaritet, og undersøgte
+              moderskab i en udvidet forståelse — som noget, der rækker ud over
+              biologi og traditionelle familieformer. Den spurgte ind til, hvad
+              det vil sige at høre sammen, skabe bånd og danne familie på andre
+              måder end gennem blod.
+            </Text>
+            <Text teksttype="brødtekst" stylingclasses="text-text-dark">
+              Fotos: Amanda Bødker
+            </Text>
+          </div>
+          <div class="w-full h-[200px] md:h-[230px] lg:h-[250px]">
+            <img
+              src="/img/udstilling3.webp"
+              alt="M / Other udstilling"
+              class="w-full h-full object-cover"
+              loading="lazy"
+            />
+          </div>
+        </div>
+
+        <!-- Bottom row: three images (desktop only) -->
+        <div class="hidden md:grid md:grid-cols-3 gap-2xs md:gap-xs">
+          <div class="w-full h-[140px] md:h-[180px]">
+            <img
+              src="/img/news1.webp"
+              alt="M / Other detalje 1"
+              class="w-full h-full object-cover"
+              loading="lazy"
+            />
+          </div>
+          <div class="w-full h-[140px] md:h-[180px]">
+            <img
+              src="/img/news2.webp"
+              alt="M / Other detalje 2"
+              class="w-full h-full object-cover"
+              loading="lazy"
+            />
+          </div>
+          <div class="w-full h-[140px] md:h-[180px]">
+            <img
+              src="/img/news3.webp"
+              alt="M / Other detalje 3"
+              class="w-full h-full object-cover"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 4 -->
+      <article
+        class="min-w-[90%] md:min-w-[80%] snap-start bg-udstilling-4-card text-text-light px-2xs md:px-s py-2xs md:py-s space-y-s"
+      >
+        <!-- Top heading -->
+        <div>
+          <Heading
+            htmlheading="h3"
+            size="large"
+            stylingclasses="text-text-light"
+          >
+            Ømme Knapper
+          </Heading>
+        </div>
+
+        <!-- Two-column content: left image, right text -->
+        <div class="grid gap-s lg:grid-cols-2 items-start">
+          <div class="w-full h-[200px] md:h-[230px] lg:h-[250px]">
+            <img
+              src="/img/udstilling4.webp"
+              alt="Ømme Knapper illustration"
+              class="w-full h-full object-cover"
+              loading="lazy"
+            />
+          </div>
+          <div class="space-y-xs md:space-y-s">
+            <Text
+              teksttype="brødtekst"
+              stylingclasses="text-text-light max-w-[560px]"
+            >
+              Ømme Knapper er et kunstnerisk rum lavet af og for
+              psykiatribrugere, deres pårørende, psykiatriske behandlere – og
+              kunstinteresserede. Udstillingsplatformen Ømme Knapper en et
+              udstillings- og samlingssted for samtidskunst og omsorgsaktivisme,
+              der taler fra sårbarhedens sted. Udstillingsplatformen undersøger
+              synet på mental sundhed og ømhedsbegrebet fra en kunstnerisk
+              vinkel, der både udfordrer, kritiserer og samarbejder med det
+              psykiatriske system.
+            </Text>
+          </div>
+        </div>
+
+        <!-- Bottom image (desktop only) -->
+        <div class="hidden md:block w-full">
+          <img
+            src="/img/fireikoner.svg"
+            alt="Støttepartnere"
+            class="w-[50%] h-[50%] object-contain"
+            loading="lazy"
+          />
+        </div>
+      </article>
+    </div>
   </section>
   <!-- ***************************** End Udstillinger ***************************** -->
 
@@ -320,4 +599,21 @@ const decemberCells: CalendarCell[] = [
 
   bindMobileClicks();
   isMobile.addEventListener("change", bindMobileClicks);
+
+  // Udstillinger carousel nav
+  const carousel = document.getElementById("udstillinger-carousel");
+  const prevBtn = document.getElementById("aktivitet-prev");
+  const nextBtn = document.getElementById("aktivitet-next");
+
+  function scrollCarousel(direction) {
+    if (!carousel) return;
+    const scrollAmount = carousel.clientWidth * 0.8;
+    carousel.scrollBy({
+      left: direction === "left" ? -scrollAmount : scrollAmount,
+      behavior: "smooth",
+    });
+  }
+
+  prevBtn?.addEventListener("click", () => scrollCarousel("left"));
+  nextBtn?.addEventListener("click", () => scrollCarousel("right"));
 </script>
