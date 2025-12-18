@@ -17,7 +17,7 @@ import Formular from "../components/Formular.astro";
       <Heading
         htmlheading="h1"
         size="large"
-        stylingclasses="text-text-dark mb-xs"
+        stylingclasses="text-text-dark mb-xs md:mb-m opacity-0 intersect:opacity-100 intersect:animate-fade-right intersect-once"
       >
         Støt vores formål <br /> og arbejde
       </Heading>
@@ -44,14 +44,14 @@ import Formular from "../components/Formular.astro";
     <!-- ***************************** End Støt vores formål og arbejde ***************************** -->
 
     <!-- ***************************** Start Vidensindsamling ***************************** -->
-    <section class="mb-m mx-2xs md:mb-xl md:mx-l">
+    <section class="px-2xs md:px-l">
       <div class="md:grid md:grid-cols-12 md:gap-2xs">
         <!-- Tekstkolonne (mobil: først, desktop: højre side) -->
         <div class="md:col-span-7 md:col-start-6 md:order-2">
           <Heading
             htmlheading="h2"
             size="medium"
-            stylingclasses="text-text-dark mb-xs md:mb-m "
+            stylingclasses="text-text-dark mb-xs md:mb-m opacity-0 intersect:opacity-100 intersect:animate-fade-right intersect-once "
           >
             Vidensindsamling
           </Heading>
@@ -97,7 +97,10 @@ import Formular from "../components/Formular.astro";
             </ul>
           </Text>
 
-          <Text teksttype="brødtekst" stylingclasses="text-text-dark ">
+          <Text
+            teksttype="brødtekst"
+            stylingclasses="text-text-dark mb-2xs md:mb-0"
+          >
             Projektet bygger på analyser af eksisterende initiativer, forskning,
             metoder og praksisser - inspireret af internationale modeller som
             Creative Health-rapporten.
@@ -105,11 +108,11 @@ import Formular from "../components/Formular.astro";
         </div>
 
         <!-- Billedkolonne (mobil: under teksten, desktop: venstre side) -->
-        <div class="md:col-span-5 md:col-start-1 md:order-1">
+        <div class="md:col-span-5 md:col-start-1 md:order-1 group overflow-hidden rounded-tl-s md:rounded-tl-l">
           <img
             src="/img/Videnindsamling.webp"
             alt="Videnindsamling"
-            class="w-full h-auto object-cover rounded-tl-s md:rounded-tl-l"
+            class="w-full h-auto rounded-tl-s md:rounded-tl-l object-cover transition-transform duration-300 group-hover:scale-110"
           />
         </div>
       </div>
@@ -117,14 +120,14 @@ import Formular from "../components/Formular.astro";
     <!-- ***************************** End Vidensindsamling ***************************** -->
 
     <!-- ***************************** Start Samarbejder & Partnerskaber ***************************** -->
-    <section class="px-2xs md:px-l py-xs md:py-m md:mb-l mb:xs">
+    <section class="px-2xs md:px-l">
       <div class="lg:grid lg:grid-cols-12 lg:gap-x-2xs">
         <!-- Venstre: Overskrift -->
         <div class="lg:col-start-1 lg:col-span-6">
           <Heading
             htmlheading="h2"
             size="medium"
-            stylingclasses="text-text-dark"
+            stylingclasses="text-text-dark opacity-0 intersect:opacity-100 intersect:animate-fade-right intersect-once"
           >
             Samarbejder og Partnerskaber
           </Heading>
@@ -141,10 +144,7 @@ import Formular from "../components/Formular.astro";
             Vil du indgå i et partnerskab?
           </Text>
 
-          <Text
-            teksttype="brødtekst"
-            stylingclasses="text-text-dark mb-xs md:mb-l"
-          >
+          <Text teksttype="brødtekst" stylingclasses="text-text-dark">
             Kontakt sekretariatschef Anéh Hajdu på 2122 2692.
           </Text>
         </div>
@@ -155,7 +155,7 @@ import Formular from "../components/Formular.astro";
 
     <!-- ***************************** Start Samarbejder & Partnerskaber scroll ***************************** -->
 
-    <section class="mb-m md:mb-l">
+    <section class="">
       <div class="overflow-hidden">
         <div
           class="logo-track flex items-center gap-m md:gap-l whitespace-nowrap"
@@ -249,11 +249,11 @@ import Formular from "../components/Formular.astro";
 
     <!-- ***************************** Start Bidragsydere text ***************************** -->
 
-    <section class="px-2xs md:px-l py-xs md:py-m mb-xs md:mb-m text-center">
+    <section class="px-2xs md:px-l text-center">
       <Heading
         htmlheading="h2"
         size="medium"
-        stylingclasses="text-text-dark mb-xs md:mb-m"
+        stylingclasses="text-text-dark mb-xs md:mb-m opacity-0 intersect:opacity-100 intersect:animate-fade-right intersect-once"
       >
         Bidragsydere
       </Heading>

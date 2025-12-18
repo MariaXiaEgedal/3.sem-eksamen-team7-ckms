@@ -11,10 +11,10 @@ const {
 } = Astro.props;
 ---
 
-<a href="/workshop-singleview" class="block">
+<a href="/workshop-singleview" class="block" data-workshop-card>
   <article
     class:list={[
-      "relative overflow-hidden rounded-tr-s md:rounded-tr-l shadow-lg min-h-[120px] md:min-h-[180px] flex flex-col lg:-ml-[60px] first:ml-0 transition-all duration-300 hover:scale-105 lg:hover:scale-110 lg:hover:z-50 lg:hover:mx-2xs",
+      "relative overflow-hidden rounded-tr-s md:rounded-tr-l shadow-lg min-h-[120px] md:min-h-[180px] flex flex-col lg:-ml-[60px] first:ml-0 transition-all duration-300 hover:scale-105 lg:hover:scale-110",
       bgColor,
       textColor,
     ]}

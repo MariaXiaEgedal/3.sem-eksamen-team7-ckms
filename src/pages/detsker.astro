@@ -252,7 +252,7 @@ const decemberCells: CalendarCell[] = [
       <Heading
         htmlheading="h2"
         size="medium"
-        stylingclasses="mb-xs md:mb-m animate-fade-right"
+        stylingclasses="mb-xs md:mb-m opacity-0 intersect:opacity-100 intersect:animate-fade-right intersect-once"
         >Nyt fra CKMS
       </Heading>
       <!-- Filter/Search bar -->
@@ -402,7 +402,11 @@ const decemberCells: CalendarCell[] = [
     <!-- ***************************** Start Udstillinger ***************************** -->
     <section id="udstillinger">
       <div class="mx-2xs md:mx-l">
-        <Heading htmlheading="h2" size="medium" stylingclasses="text-text-dark">
+        <Heading
+          htmlheading="h2"
+          size="medium"
+          stylingclasses="text-text-dark opacity-0 intersect:opacity-100 intersect:animate-fade-right intersect-once"
+        >
           Udstillinger
         </Heading>
       </div>
@@ -567,7 +571,7 @@ const decemberCells: CalendarCell[] = [
             <Heading
               htmlheading="h3"
               size="large"
-              stylingclasses="text-text-dark"
+              stylingclasses="text-text-dark opacity-0 intersect:opacity-100 intersect:animate-fade-right intersect-once"
             >
               M / Other (2021)
             </Heading>
@@ -641,7 +645,7 @@ const decemberCells: CalendarCell[] = [
             <Heading
               htmlheading="h3"
               size="large"
-              stylingclasses="text-text-light"
+              stylingclasses="text-text-light opacity-0 intersect:opacity-100 intersect:animate-fade-right intersect-once"
             >
               Ømme Knapper
             </Heading>
@@ -689,7 +693,10 @@ const decemberCells: CalendarCell[] = [
     <!-- ***************************** End Udstillinger ***************************** -->
 
     <!-- ***************************** Start Bestil et foredrag ***************************** -->
-    <section class="bg-background-v4 p-m md:py-l">
+    <section
+      class="bg-background-v4 py-xs md:py-m px-2xs md:px-l"
+      id="bestil-foredrag"
+    >
       <div>
         <div class="mb-2xs md:mb-m">
           <Heading

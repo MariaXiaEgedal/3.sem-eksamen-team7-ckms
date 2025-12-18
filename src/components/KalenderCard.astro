@@ -2,6 +2,7 @@
 import { Image } from "astro:assets";
 import type { ImageMetadata } from "astro";
 import Text from "./Text.astro";
+import Heading from "./Heading.astro";
 
 type EventEntry = { time: string; title: string; subtitle?: string };
 
@@ -24,44 +25,58 @@ const dayOnly = dateLabel.split(".")[0]; // Ekstraher kun dagen (f.eks. "01" fra
 ---
 
 <article class="relative flex flex-col h-full">
-  <div class="p-3xs md:p-3xs grid grid-rows-[1fr_auto] gap-3xs md:gap-3xs">
-    <div class="hidden md:grid gap-4xs">
+  <div class="p-3xs md:p-3xs flex flex-col h-full">
+    <div class="hidden md:grid gap-4xs flex-grow">
       {
         events.length ? (
           events.map((item) => (
             <div class="grid grid-cols-[auto_1fr] gap-4xs items-start">
-              <p class="m-0 text-sm font-bold text-text-dark leading-tight">
+              <Text
+                teksttype="billedtekst"
+                stylingclasses="m-0 font-bold text-text-dark leading-tight"
+              >
                 {item.time}
-              </p>
+              </Text>
               <div class="flex flex-col gap-[2px]">
-                <p class="m-0 text-base font-bold text-text-dark leading-tight">
+                <Text
+                  teksttype="billedtekst"
+                  stylingclasses="m-0 font-bold text-text-dark leading-tight"
+                >
                   {item.title}
-                </p>
+                </Text>
                 {item.subtitle && (
-                  <p class="m-0 text-sm text-text-dark leading-tight">
+                  <Text
+                    teksttype="billedtekst"
+                    stylingclasses="m-0 text-text-dark leading-tight"
+                  >
                     {item.subtitle}
-                  </p>
+                  </Text>
                 )}
               </div>
             </div>
           ))
         ) : (
-          <p class="m-0 text-sm text-text-dark font-semibold">
+          <Text
+            teksttype="billedtekst"
+            stylingclasses="text-text-dark font-semibold"
+          >
             Ingen aktiviteter
-          </p>
+          </Text>
         )
       }
     </div>
 
     <div
-      class="flex flex-col items-end gap-4xs md:items-end md:gap-4xs mobile:items-center mobile:justify-center"
+      class="flex flex-col items-end gap-4xs md:items-end md:gap-4xs md:mb-[72px] mobile:items-center mobile:justify-center"
     >
-      <div
-        class="text-4xl md:text-4xl font-extrabold text-text-dark text-right leading-none"
+      <Heading
+        htmlheading="h4"
+        size="xsmallbold"
+        stylingclasses="text-text-dark text-right leading-none"
       >
         <span class="hidden md:inline">{dateLabel}</span>
         <span class="md:hidden text-xl">{dayOnly}</span>
-      </div>
+      </Heading>
       {
         events.length > 0 && (
           <div class="w-2 h-2 md:w-2 md:h-2 rounded-full bg-primary-pink md:hidden mobile:w-[6px] mobile:h-[6px]" />
