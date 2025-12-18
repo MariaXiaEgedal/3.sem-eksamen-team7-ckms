@@ -1,11 +1,26 @@
 ---
 import Heading from "./Heading.astro";
 
-const { bgColor, textColor, headingh3, headingh4, imgSrc, imgAlt, number } =
-  Astro.props;
+const {
+  bgColor,
+  textColor,
+  headingh3,
+  headingh4,
+  imgSrc,
+  imgAlt,
+  imgClass = "",
+  number,
+  class: className,
+} = Astro.props;
 ---
 
-<div class:list={["relative rounded-tr-s md:rounded-tr-l p-s md:p-m", bgColor]}>
+<div
+  class:list={[
+    "relative rounded-tr-s md:rounded-tr-l p-s md:p-m",
+    bgColor,
+    className,
+  ]}
+>
   <!-- Heading h3 -->
   <Heading
     htmlheading="h3"
@@ -19,14 +34,18 @@ const { bgColor, textColor, headingh3, headingh4, imgSrc, imgAlt, number } =
   <Heading
     htmlheading="h4"
     size="xsmall"
-    stylingclasses={`${textColor} mb-2xs md:mb-xs `}
+    stylingclasses={`${textColor} mb-2xs md:mb-xs line-clamp-3`}
   >
     {headingh4}
   </Heading>
 
   <!-- Image -->
   <div class="mb-m overflow-hidden">
-    <img src={imgSrc} alt={imgAlt} class="w-full h-auto object-cover" />
+    <img
+      src={imgSrc}
+      alt={imgAlt}
+      class:list={["w-full", "object-cover", imgClass || "h-auto"]}
+    />
   </div>
 
   <!-- Number -->

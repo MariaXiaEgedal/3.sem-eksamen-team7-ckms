@@ -10,6 +10,7 @@ import UdstillingCard from "../components/UdstillingCard.astro";
 import NewsCard from "../components/NewsCard.astro";
 import NewsletterSignup from "../components/NewsletterSignup.astro";
 import InstagramCarousel from "../components/InstagramCarousel.astro";
+// import AllWorkhopCard from "../components/AllWorkshopCard.astro";
 ---
 
 <MainLayout title="CKMS">
@@ -53,7 +54,9 @@ import InstagramCarousel from "../components/InstagramCarousel.astro";
           </Text>
 
           <div class="hidden md:block">
-            <Button>Læs mere om os</Button>
+            <a href="/omos">
+              <Button>Læs mere om os</Button>
+            </a>
           </div>
         </div>
 
@@ -71,7 +74,9 @@ import InstagramCarousel from "../components/InstagramCarousel.astro";
 
         <!-- Button - only on mobile -->
         <div class="col-span-4 md:hidden flex justify-center">
-          <Button>Læs mere om os</Button>
+          <a href="/omos">
+            <Button>Læs mere om os</Button>
+          </a>
         </div>
       </div>
     </section>
@@ -89,7 +94,9 @@ import InstagramCarousel from "../components/InstagramCarousel.astro";
       <TildigSection class="mb-xs md:mb-m" />
 
       <div class="flex justify-center">
-        <Button>Læs mere</Button>
+        <a href="/tildig">
+          <Button>Læs mere</Button>
+        </a>
       </div>
     </section>
     <!-- ***************************** End Til dig, som er ***************************** -->
@@ -111,54 +118,11 @@ import InstagramCarousel from "../components/InstagramCarousel.astro";
       <Text typest="brødtekst" stylingclasses="mb-2xs md:mb-xs">
         Vi tilbyder følgende workshops:
       </Text>
-
-      <div
-        class="grid grid-cols-2 lg:grid-cols-5 gap-2xs lg:gap-0 mb-xs md:mb-m"
-      >
-        <CardWorkshop
-          title="Skrivegrupper"
-          imageSrc="/img/IkonSkrivegrupper.svg"
-          alt="Åben bog"
-          bgColor="bg-workshop-skrivegruppe-card"
-          textColor="text-text-dark"
-          zIndex={5}
-        />
-        <CardWorkshop
-          title="Dramagruppe"
-          imageSrc="/img/IkonDramagruppe.svg"
-          alt="Teatermasker"
-          bgColor="bg-workshop-dramagruppe-card"
-          textColor="text-text-light"
-          zIndex={4}
-        />
-        <CardWorkshop
-          title="Billedkunst"
-          imageSrc="/img/IkonBilledkunst.svg"
-          alt="Male-palette"
-          bgColor="bg-workshop-billedkunst-card"
-          textColor="text-text-dark"
-          zIndex={3}
-        />
-        <CardWorkshop
-          title="Åbent værksted"
-          imageSrc="/img/IkonÅbentværksted.svg"
-          alt="Åben dør"
-          bgColor="bg-workshop-aabentvaerksted-card"
-          textColor="text-text-dark"
-          zIndex={2}
-        />
-        <CardWorkshop
-          title="Film og lyd"
-          imageSrc="/img/IkonFilmlyd.svg"
-          alt="Filmklaptræ"
-          bgColor="bg-workshop-filmlyd-card"
-          textColor="text-text-light"
-          zIndex={1}
-        />
-      </div>
-
+      <!-- <AllWorkshopCard /> -->
       <div class="flex justify-center">
-        <Button>Læs mere</Button>
+        <a href="/workshops">
+          <Button>Læs mere</Button>
+        </a>
       </div>
     </section>
     <!-- ***************************** End Workshops ***************************** -->
@@ -202,15 +166,14 @@ import InstagramCarousel from "../components/InstagramCarousel.astro";
         >Udstillinger i CKMS
       </Heading>
 
-      <div
-        class="flex gap-2xs overflow-x-auto pb-s lg:pb-m snap-x snap-mandatory scroll-smooth items-stretch px-2xs"
-        aria-label="Udstillinger"
-      >
+      <div class="overflow-x-auto overflow-y-hidden scroll-smooth">
         <div
-          class="shrink-0 snap-start w-[85%] sm:w-[60%] lg:w-[45%] min-w-[280px] flex"
+          class="relative flex gap-2xs overflow-x-auto snap-x snap-mandatory scroll-smooth items-stretch px-2xs pb-l md:grid md:gap-0 md:overflow-visible md:place-items-start"
+          aria-label="Udstillinger"
         >
           <UdstillingCard
-            class="flex flex-col h-full"
+            class="udstilling-card col-start-1 row-start-1 shrink-0 snap-start w-[85%] sm:w-[70%] md:w-[70%] lg:w-[55%] max-w-[900px] min-w-[280px] min-h-[360px] translate-x-0 md:hover:translate-x-2 transition-transform duration-300 ease-out cursor-pointer z-40"
+            data-card="1"
             headingh3="are you mad yet?"
             headingh4="are you mad yet? kaster lys på de økonomiske reformer, som rammer de syge i vores samfund."
             imgSrc="/img/udstilling1.webp"
@@ -219,13 +182,10 @@ import InstagramCarousel from "../components/InstagramCarousel.astro";
             textColor="text-text-dark"
             number="1"
           />
-        </div>
 
-        <div
-          class="shrink-0 snap-start w-[85%] sm:w-[60%] lg:w-[45%] min-w-[280px] flex"
-        >
           <UdstillingCard
-            class="flex flex-col h-full"
+            class="udstilling-card col-start-1 row-start-1 shrink-0 snap-start w-[85%] sm:w-[70%] md:w-[70%] lg:w-[55%] max-w-[900px] min-w-[280px] min-h-[360px] translate-x-0 md:translate-x-[7.5rem] md:hover:translate-x-[9.5rem] transition-transform duration-300 ease-out cursor-pointer z-30 [&.expanded]:md:!translate-x-[40rem] [.expanded-2~&]:md:-translate-x-[7.5rem]"
+            data-card="2"
             headingh3="Kognitive dæmoner"
             headingh4="Små væsener bevæger sig gennem kognitionens lag og forstyrrer hverdagens strukturer som 'kognitive dæmoner.'"
             imgSrc="/img/udstilling2.webp"
@@ -234,13 +194,10 @@ import InstagramCarousel from "../components/InstagramCarousel.astro";
             textColor="text-text-light"
             number="2"
           />
-        </div>
 
-        <div
-          class="shrink-0 snap-start w-[85%] sm:w-[60%] lg:w-[45%] min-w-[280px] flex"
-        >
           <UdstillingCard
-            class="flex flex-col h-full"
+            class="udstilling-card col-start-1 row-start-1 shrink-0 snap-start w-[85%] sm:w-[70%] md:w-[70%] lg:w-[55%] max-w-[900px] min-w-[280px] min-h-[360px] translate-x-0 md:translate-x-[15.25rem] md:hover:translate-x-[18.25rem] transition-transform duration-300 ease-out cursor-pointer z-20 [&.expanded]:md:!translate-x-[46.5rem] [.expanded-2~&]:md:-translate-x-[7.5rem] [.expanded-3~&]:md:-translate-x-[14.75rem]"
+            data-card="3"
             headingh3="M / Other (2021)"
             headingh4="Samtidskunstnere undersøger moderskab gennem en interaktiv kunstinstallation."
             imgSrc="/img/udstilling3.webp"
@@ -249,22 +206,25 @@ import InstagramCarousel from "../components/InstagramCarousel.astro";
             textColor="text-text-dark"
             number="3"
           />
-        </div>
 
-        <div
-          class="shrink-0 snap-start w-[85%] sm:w-[60%] lg:w-[45%] min-w-[280px] flex"
-        >
           <UdstillingCard
-            class="flex flex-col h-full"
+            class="udstilling-card col-start-1 row-start-1 shrink-0 snap-start w-[85%] sm:w-[70%] md:w-[70%] lg:w-[55%] max-w-[900px] min-w-[280px] min-h-[360px] translate-x-0 md:translate-x-[24.75rem] md:hover:translate-x-[26.75rem] transition-transform duration-300 ease-out cursor-pointer z-10 [&.expanded]:md:!translate-x-[53.5rem] [.expanded-2~&]:md:-translate-x-[8rem] [.expanded-3~&]:md:-translate-x-[16rem] [.expanded-4~&]:md:-translate-x-[24.75rem]"
+            data-card="4"
             headingh3="Ømme Knapper"
             headingh4="Et kunstnerisk rum lavet af og for psykiatribrugere, deres pårørende, psykiatriske behandlere – og kunstinteresserede."
             imgSrc="/img/udstilling4.webp"
+            imgClass="h-[301px] object-top"
             imgAlt="Illustration af demonstranter med skilt 'Ømme Knapper'"
             bgColor="bg-udstilling-4-card"
             textColor="text-text-light"
             number="4"
           />
         </div>
+      </div>
+      <div class="flex justify-center">
+        <a href="/detsker#udstillinger">
+          <Button>Læs mere</Button>
+        </a>
       </div>
     </section>
     <!-- ***************************** End Udstillinger i CKMS ***************************** -->
@@ -370,7 +330,9 @@ import InstagramCarousel from "../components/InstagramCarousel.astro";
       </div>
 
       <div class="flex justify-center">
-        <Button>Se flere nyheder</Button>
+        <a href="/detsker#nyt-fra-ckms">
+          <Button>Se flere nyheder</Button>
+        </a>
       </div>
     </section>
     <!-- ***************************** End Nyt fra CKMS ***************************** -->
@@ -420,4 +382,28 @@ import InstagramCarousel from "../components/InstagramCarousel.astro";
     </section>
     <!-- ***************************** End Følg med på Instagram ***************************** -->
   </div>
+  <!-- ***************************** JS til udstillingscards ***************************** -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const cards = document.querySelectorAll(".udstilling-card");
+      const container = cards[0]?.parentElement;
+
+      cards.forEach((card) => {
+        card.addEventListener("click", () => {
+          const cardNum = card.getAttribute("data-card");
+          const isExpanded = card.classList.contains("expanded");
+
+          // Remove all expanded states
+          cards.forEach((c) => c.classList.remove("expanded"));
+          container?.classList.remove("expanded-2", "expanded-3", "expanded-4");
+
+          // Toggle expansion
+          if (!isExpanded && cardNum !== "1") {
+            card.classList.add("expanded");
+            container?.classList.add(`expanded-${cardNum}`);
+          }
+        });
+      });
+    });
+  </script>
 </MainLayout>
