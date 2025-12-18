@@ -12,45 +12,48 @@ import TildigSection from "../components/TildigSection.astro";
 <MainLayout title="Til Dig">
   <div class="flex flex-col gap-m md:gap-xl my-m md:my-xl">
     <!-- ***************************** Start Til dig, som er intro ***************************** -->
-    <section class="mx-2xs md:mx-l">
+    <sectikanon class="mx-2xs md:mx-l">
       <Heading
         htmlheading="h1"
         size="large"
-        stylingclasses="text-text-dark mb-xs md:mb-m"
+        stylingclasses="text-text-dark mb-xs md:mb-m opacity-0 intersect:opacity-100 intersect:animate-fade-right intersect-once"
         >Til dig, som er ...
       </Heading>
-      <Heading
-        htmlheading="h4"
-        size="xsmall"
-        stylingclasses="text-text-dark mb-2xs md:mb-xs"
-        >Nationalt Center for Kunst og Mental Sundhed henvender sig først og
-        fremmest til dig med erfaringer med psykiske lidelser og psykiatrisk
-        behandling.</Heading
-      >
-      <Text
-        teksttype="brødtekst"
-        stylingclasses="text-text-dark mb-3xs md:mb-3xs"
-        >Hos os møder du et trygt frirum og et fællesskab, hvor vi møder
-        hinanden gennem kunst og kreativitet.
-      </Text>
+      <div class="max-w-[900px]">
+        <Heading
+          htmlheading="h4"
+          size="xsmall"
+          stylingclasses="text-text-dark mb-2xs md:mb-xs"
+          >Nationalt Center for Kunst og Mental Sundhed henvender sig først og
+          fremmest til dig med erfaringer med psykiske lidelser og psykiatrisk
+          behandling.</Heading
+        >
+        <Text
+          teksttype="brødtekst"
+          stylingclasses="text-text-dark mb-3xs md:mb-2xs"
+          >Hos os møder du et trygt frirum og et fællesskab, hvor vi møder
+          hinanden gennem kunst og kreativitet.
+        </Text>
 
-      <Text teksttype="brødtekst" stylingclasses="text-text-dark mb-xs  md:mb-m"
-        >Værkstederne er for dig med psykisk sårbarhed, som søger støtte til at
-        finde fodfæste, håb og nye drømme.
-      </Text>
-
+        <Text
+          teksttype="brødtekst"
+          stylingclasses="text-text-dark mb-xs  md:mb-m"
+          >Værkstederne er for dig med psykisk sårbarhed, som søger støtte til
+          at finde fodfæste, håb og nye drømme.
+        </Text>
+      </div>
       <TildigSection />
-    </section>
+    </sectikanon>
 
     <!-- ***************************** Start Til dig, som er bruger ***************************** -->
     <section class="mx-2xs md:mx-l">
-      <div class="md:grid md:grid-cols-12 mb-m md:mb-xl md:gap-2xs">
+      <div class="md:grid md:grid-cols-12 md:gap-2xs">
         <!-- Tekstkolonne -->
         <div class="md:col-span-7 md:col-start-1">
           <Heading
             htmlheading="h2"
             size="medium"
-            stylingclasses="text-text-dark mb-xs md:mb-m"
+            stylingclasses="text-text-dark mb-xs md:mb-m opacity-0 intersect:opacity-100 intersect:animate-fade-right intersect-once"
           >
             Til dig som er bruger
           </Heading>
@@ -66,7 +69,7 @@ import TildigSection from "../components/TildigSection.astro";
 
           <Text
             teksttype="brødtekst"
-            stylingclasses="text-text-dark mb-2xs md:mb-xs"
+            stylingclasses="text-text-dark mb-4xs md:mb-3xs"
           >
             Du kan deltage i:
 
@@ -92,11 +95,13 @@ import TildigSection from "../components/TildigSection.astro";
         </div>
 
         <!-- Billedkolonne -->
-        <div class="md:col-span-5 md:col-start-8">
+        <div
+          class="md:col-span-5 md:col-start-8 overflow-hidden group rounded-tr-s md:rounded-tr-l"
+        >
           <img
             src="/img/brugerbilledekvadrat.webp"
             alt="Bruger"
-            class="w-full h-auto object-cover rounded-tr-s md:rounded-tr-l"
+            class="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-110"
           />
         </div>
       </div>
@@ -113,16 +118,16 @@ import TildigSection from "../components/TildigSection.astro";
         Hvordan foregår processen?
       </Heading>
 
-      <div class="grid grid-cols-4 gap-x-2xs md:grid-cols-12 md:grid-rows-2">
+      <div class="grid grid-cols-4 gap-x-2xs lg:grid-cols-12 lg:grid-rows-2">
         <!-- 1 -->
         <div
-          class="col-start-1 col-span-3 mb-m md:mb-0 md:col-start-1 md:col-span-3 md:row-start-1"
+          class="col-start-1 col-span-3 mb-m lg:mb-0 lg:col-start-1 lg:col-span-3 lg:row-start-1 opacity-0 intersect:opacity-100 intersect:animate-fade-right intersect:animate-delay-100 intersect-once"
         >
-          <div class="flex items-baseline gap-4xs">
+          <div class="flex items-end gap-4xs">
             <Heading
               htmlheading="h1"
               size="large"
-              stylingclasses="text-text-dark"
+              stylingclasses="text-text-dark opacity-0 intersect:opacity-100 intersect:animate-fade-right intersect-once"
             >
               1
             </Heading>
@@ -143,9 +148,9 @@ import TildigSection from "../components/TildigSection.astro";
 
         <!-- 2 -->
         <div
-          class="col-start-2 col-span-4 mb-m md:mb-0 md:col-start-4 md:col-span-3 md:row-start-2"
+          class="col-start-2 col-span-4 mb-m lg:mb-0 lg:col-start-4 lg:col-span-3 lg:row-start-2 opacity-0 intersect:opacity-100 intersect:animate-fade-right intersect:animate-delay-200 intersect-once"
         >
-          <div class="flex items-baseline gap-4xs">
+          <div class="flex items-end gap-4xs">
             <Heading
               htmlheading="h1"
               size="large"
@@ -170,9 +175,9 @@ import TildigSection from "../components/TildigSection.astro";
 
         <!-- 3 -->
         <div
-          class="col-start-1 col-span-3 mb-m md:mb-0 md:col-start-7 md:col-span-3 md:row-start-1"
+          class="col-start-1 col-span-3 mb-m lg:mb-0 lg:col-start-7 lg:col-span-3 lg:row-start-1 opacity-0 intersect:opacity-100 intersect:animate-fade-right intersect:animate-delay-300 intersect-once"
         >
-          <div class="flex items-baseline gap-4xs">
+          <div class="flex items-end gap-4xs">
             <Heading
               htmlheading="h1"
               size="large"
@@ -197,13 +202,13 @@ import TildigSection from "../components/TildigSection.astro";
 
         <!-- 4 -->
         <div
-          class="col-start-2 col-span-4 mb-m md:mb-0 md:col-start-10 md:col-span-3 md:row-start-2"
+          class="col-start-2 col-span-4 mb-m lg:mb-0 lg:col-start-10 lg:col-span-3 lg:row-start-2 opacity-0 intersect:opacity-100 intersect:animate-fade-right intersect:animate-delay-400 intersect-once"
         >
-          <div class="flex items-baseline gap-4xs">
+          <div class="flex items-end gap-4xs">
             <Heading
               htmlheading="h1"
               size="large"
-              stylingclasses="text-text-dark"
+              stylingclasses="text-text-dark "
             >
               4
             </Heading>
@@ -226,14 +231,14 @@ import TildigSection from "../components/TildigSection.astro";
     <!-- ***************************** End Hvordans foregår processen? ***************************** -->
 
     <!-- ***************************** Start Til dig, som er forsker  ***************************** -->
-    <section class="mb-m mx-2xs md:mb-xl md:mx-l">
+    <section class="mx-2xs md:mx-l">
       <div class="md:grid md:grid-cols-12 md:gap-2xs">
         <!-- Tekstkolonne (mobil: først, desktop: højre side) -->
         <div class="md:col-span-7 md:col-start-6 md:order-2">
           <Heading
             htmlheading="h2"
             size="medium"
-            stylingclasses="text-text-dark mb-xs md:mb-m"
+            stylingclasses="text-text-dark mb-xs md:mb-m opacity-0 intersect:opacity-100 intersect:animate-fade-right intersect-once"
           >
             Til dig som er forsker
           </Heading>
@@ -248,7 +253,7 @@ import TildigSection from "../components/TildigSection.astro";
 
           <Text
             teksttype="brødtekst"
-            stylingclasses="text-text-dark mb-2xs md:mb-xs"
+            stylingclasses="text-text-dark mb-3xs md:mb-2xs"
           >
             Center for Kunst og Mental Sundhed tilbyder et unikt, praksisnært
             forskningsmiljø, hvor forskning og kunstnerisk praksis udvikles tæt
@@ -258,7 +263,7 @@ import TildigSection from "../components/TildigSection.astro";
 
           <Text
             teksttype="brødtekst"
-            stylingclasses="text-text-dark mb-xs md:mb-m"
+            stylingclasses="text-text-dark mb-xs md:mb-0"
           >
             Centret samler forskellige fagligheder - fra læger og sygeplejersker
             til kunstnere, psykologer og filosoffer - i et kreativt og
@@ -268,11 +273,13 @@ import TildigSection from "../components/TildigSection.astro";
         </div>
 
         <!-- Billedkolonne (mobil: under teksten, desktop: venstre side) -->
-        <div class="md:col-span-5 md:col-start-1 md:order-1">
+        <div
+          class="md:col-span-5 md:col-start-1 md:order-1 overflow-hidden group rounded-tl-s md:rounded-tl-l"
+        >
           <img
             src="/img/tilforskerbillede.webp"
             alt="Bruger"
-            class="w-full h-auto object-cover rounded-tl-s md:rounded-tl-l"
+            class="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-110"
           />
         </div>
       </div>
@@ -280,61 +287,55 @@ import TildigSection from "../components/TildigSection.astro";
     <!-- ***************************** End Til dig, som er forsker  ***************************** -->
 
     <!-- ***************************** Start Rewritalize ***************************** -->
-    <section
-      class="bg-background-v5 mb-m md:mb-xl px-2xs md:px-l py-xs md:py-m"
-    >
+    <section class="bg-background-v5 px-2xs md:px-l py-xs md:py-m">
       <Heading
-        htmlheading="h2"
-        size="medium"
-        stylingclasses="text-text-dark mb-xs md:mbm"
+        htmlheading="h3"
+        size="small"
+        stylingclasses="text-text-dark mb-xs"
       >
         REWRITALIZE
       </Heading>
+      <div class="md:grid md:grid-cols-3 md:gap-xs">
+        <div class="mb-2xs md:mb-0">
+          <Text teksttype="brødtekst" stylingclasses="text-text-dark md:mb-0">
+            REWRITALIZE undersøger, hvordan forfatterledede skrive- og
+            kunstgrupper kan styrke recovery hos mennesker med psykisk
+            sårbarhed.
+          </Text>
+        </div>
 
-      <Text
-        teksttype="brødtekst"
-        stylingclasses="text-text-dark mb-2xs md:mb-xs"
-      >
-        REWRITALIZE undersøger, hvordan forfatterledede skrive- og kunstgrupper
-        kan styrke recovery hos mennesker med psykisk sårbarhed.
-      </Text>
+        <div class="space-y-2xs mb-2xs md:mb-0">
+          <Text teksttype="brødtekst" stylingclasses="text-text-dark">
+            Formålet er at skabe evidens for, at sådanne forløb kan blive en del
+            af den psykiatriske behandling i Danmark.
+          </Text>
 
-      <Text
-        teksttype="brødtekst"
-        stylingclasses="text-text-dark mb-2xs md:mb-xs"
-      >
-        Formålet er at skabe evidens for, at sådanne forløb kan blive en del af
-        den psykiatriske behandling i Danmark.
-      </Text>
+          <Text teksttype="brødtekst" stylingclasses="text-text-dark">
+            Vi forsker i effekten af kreative gruppeforløb, som kombinerer
+            kunstnerisk praksis og gruppeterapi.
+          </Text>
+        </div>
 
-      <Text
-        teksttype="brødtekst"
-        stylingclasses="text-text-dark mb-2xs md:mb-xs"
-      >
-        Vi forsker i effekten af kreative gruppeforløb, som kombinerer
-        kunstnerisk praksis og gruppeterapi.
-      </Text>
-
-      <Text
-        teksttype="brødtekst"
-        stylingclasses="text-text-dark mb-2xs md:mb-xs"
-      >
-        Interventionen er udviklet i et tværfagligt samarbejde mellem
-        psykiatere, forfattere, kunstnere og mennesker med egne erfaringer fra
-        psykiatrien.
-      </Text>
+        <div class="space-y-2xs">
+          <Text teksttype="brødtekst" stylingclasses="text-text-dark">
+            Interventionen er udviklet i et tværfagligt samarbejde mellem
+            psykiatere, forfattere, kunstnere og mennesker med egne erfaringer
+            fra psykiatrien.
+          </Text>
+        </div>
+      </div>
     </section>
     <!-- ***************************** End Rewritalize ***************************** -->
 
     <!-- ***************************** Start Til dig, som er kunstner ***************************** -->
     <section class="mx-2xs md:mx-l">
-      <div class="md:grid md:grid-cols-12 mb-m md:mb-xl md:gap-2xs">
+      <div class="md:grid md:grid-cols-12 md:gap-2xs">
         <!-- Tekstkolonne -->
         <div class="md:col-span-7 md:col-start-1">
           <Heading
             htmlheading="h2"
             size="medium"
-            stylingclasses="text-text-dark mb-xs md:mb-m"
+            stylingclasses="text-text-dark mb-xs md:mb-m opacity-0 intersect:opacity-100 intersect:animate-fade-right intersect-once"
           >
             Til dig som Kunstner
           </Heading>
@@ -366,11 +367,13 @@ import TildigSection from "../components/TildigSection.astro";
         </div>
 
         <!-- Billedkolonne -->
-        <div class="md:col-span-5 md:col-start-8">
+        <div
+          class="md:col-span-5 md:col-start-8 overflow-hidden group rounded-tr-s md:rounded-tr-l"
+        >
           <img
             src="/img/tilkunstnerbillede.webp"
             alt="Bruger"
-            class="w-full h-auto object-cover rounded-tr-s md:rounded-tr-l"
+            class="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-110"
           />
         </div>
       </div>
@@ -378,16 +381,14 @@ import TildigSection from "../components/TildigSection.astro";
     <!-- ***************************** End Til dig, som er kunstner ***************************** -->
 
     <!-- ***************************** Start Er du forfatter? ***************************** -->
-    <section
-      class="bg-background-v3 mb-m md:mb-xl px-2xs md:px-l py-xs md:py-m"
-    >
-      <div class="md:grid md:grid-cols-12 md:gap-x-2xs">
+    <section class="bg-background-v3 px-2xs md:px-l py-s md:py-m">
+      <div class="md:grid md:grid-cols-12 md:gap-m">
         <!-- Venstre kolonne -->
         <div class="md:col-start-1 md:col-span-6">
           <Heading
             htmlheading="h4"
             size="xsmall"
-            stylingclasses="text-text-dark mb-xs md:mb-xs"
+            stylingclasses="text-text-dark mb-2xs md:mb-xs"
           >
             Er du forfatter?
           </Heading>
@@ -395,7 +396,6 @@ import TildigSection from "../components/TildigSection.astro";
           <Text teksttype="brødtekst" stylingclasses="text-text-dark mb-2xs">
             Kære forfatter, du som arbejder med ord og proces. Hos os undersøger
             vi teksten sammen:
-
             <ul class="list-disc ml-2xs mb-2xs">
               <li>
                 <Text stylingclasses="text-text-dark">
@@ -415,8 +415,11 @@ import TildigSection from "../components/TildigSection.astro";
             </ul>
           </Text>
 
-          <Text teksttype="brødtekst" stylingclasses="text-text-dark mb-m ">
-            Teksten kan være stærk, stille, sårbar eller voldsom – alt er
+          <Text
+            teksttype="brødtekst"
+            stylingclasses="text-text-dark mb-m md:mb-0 "
+          >
+            Teksten kan være stærk, stille, sårbar eller voldsom - alt er
             velkomment i det fælles refleksionsrum.
           </Text>
         </div>
@@ -426,7 +429,7 @@ import TildigSection from "../components/TildigSection.astro";
           <Heading
             htmlheading="h4"
             size="xsmall"
-            stylingclasses="text-text-dark mb-2xs "
+            stylingclasses="text-text-dark mb-2xs md:mb-xs"
           >
             Æstetik fremfor diagnose
           </Heading>
@@ -441,7 +444,7 @@ import TildigSection from "../components/TildigSection.astro";
             arbejde følges af forskere og supervisorer.
           </Text>
 
-          <Text teksttype="brødtekst" stylingclasses="text-text-dark mb-2xs">
+          <Text teksttype="brødtekst" stylingclasses="text-text-dark">
             Du skal ikke være en bestemt type - blot et menneske, der tager sin
             skrivning alvorligt og vil undersøge den i fællesskab. Alt er tekst.
           </Text>
@@ -453,13 +456,13 @@ import TildigSection from "../components/TildigSection.astro";
 
   <!-- ***************************** Start Til dig, som er behandler ***************************** -->
   <section class="mb-m mx-2xs md:mb-xl md:mx-l">
-    <div class="md:grid md:grid-cols-12 md:gap-2xs">
+    <div class="md:grid md:grid-cols-12 md:gap-m">
       <!-- Tekstkolonne (mobil: først, desktop: højre side) -->
       <div class="md:col-span-7 md:col-start-6 md:order-2">
         <Heading
           htmlheading="h2"
           size="medium"
-          stylingclasses="text-text-dark mb-xs md:mb-m"
+          stylingclasses="text-text-dark mb-xs md:mb-m opacity-0 intersect:opacity-100 intersect:animate-fade-right intersect-once"
         >
           Til dig som er behandler
         </Heading>
@@ -472,38 +475,34 @@ import TildigSection from "../components/TildigSection.astro";
           Kontaktperson til kontaktperson
         </Heading>
 
-        <Text
-          teksttype="brødtekst"
-          stylingclasses="text-text-dark mb-2xs md:mb-xs"
-        >
+        <Text teksttype="brødtekst" stylingclasses="text-text-dark mb-2xs">
           Som kontaktperson i psykiatrien kender du måske brugere, der savner et
           kreativt og sygdomsfrit fællesskab, fordi de eksisterende tilbud ikke
           helt passer - især de meget kreative og ressourcefulde, som samtidig
           kan have det svært socialt.
         </Text>
 
-        <Text
-          teksttype="brødtekst"
-          stylingclasses="text-text-dark mb-xs md:mb-m"
-        >
+        <Text teksttype="brødtekst" stylingclasses="text-text-dark mb-2xs">
           Jeg var selv lidt forbeholden i starten, for vi skal jo henvise til
           trygge tilbud. Men kunstgrupperne i CKMS er virkelig sikre, fordi der
           er professionelle behandlere og tæt kontakt til os.
         </Text>
         <Text
           teksttype="brødtekst"
-          stylingclasses="text-text-dark mb-xs md:mb-m"
+          stylingclasses="text-text-dark mb-xs md:mb-0"
         >
           De brugere, jeg har henvist, har fået det tydeligt bedre.
         </Text>
       </div>
 
       <!-- Billedkolonne (mobil: under teksten, desktop: venstre side) -->
-      <div class="md:col-span-5 md:col-start-1 md:order-1">
+      <div
+        class="md:col-span-5 md:col-start-1 md:order-1 overflow-hidden group rounded-tl-s md:rounded-tl-l"
+      >
         <img
           src="/img/tilbehandlerbillede.webp"
           alt="Bruger"
-          class="w-full h-auto object-cover rounded-tl-s md:rounded-tl-l"
+          class="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-110"
         />
       </div>
     </div>
@@ -511,31 +510,25 @@ import TildigSection from "../components/TildigSection.astro";
   <!-- ***************************** End Til dig, som er behandler ***************************** -->
 
   <!-- ***************************** Start Læge til læge ***************************** -->
-  <section class="bg-background-v4 px-2xs md:px-l py-xs md:py-m">
+  <section class="bg-background-v4 px-2xs md:px-l py-xs md:py-m mb-m md:mb-xl">
     <div class="md:grid md:grid-cols-12 md:gap-x-2xs">
       <div class="md:col-start-4 md:col-span-7">
         <Heading
           htmlheading="h4"
           size="xsmall"
-          stylingclasses="text-text-light mb-xs md:mb-m"
+          stylingclasses="text-text-light mb-xs"
         >
           Læge til læge
         </Heading>
 
-        <Text
-          teksttype="brødtekst"
-          stylingclasses="text-text-light mb-xs md:mb-m"
-        >
+        <Text teksttype="brødtekst" stylingclasses="text-text-light mb-2xs">
           “At være med i kunstgrupperne som læge er både sjovt, meningsfuldt og
           fagligt lærerigt. Man opdager nye sider af patienterne - også dem, der
           ellers siger meget lidt i konsultationerne. Gennem deres kunst åbner
           de et indre liv, man sjældent ser.
         </Text>
 
-        <Text
-          teksttype="brødtekst"
-          stylingclasses="text-text-light mb-xs md:mb-m"
-        >
+        <Text teksttype="brødtekst" stylingclasses="text-text-light">
           Kunstworkshoppen skaber et menneskeligt mødested, hvor der opstår nye
           former for samtaler, refleksion og leg. Det har gjort mig til en bedre
           læge i mødet med patienterne i det kreative rum.”
