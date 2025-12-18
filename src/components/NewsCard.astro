@@ -13,13 +13,11 @@ const {
 ---
 
 <article class="flex flex-col">
-  <div class="relative aspect-square mb-4xs md:mb-3xs overflow-hidden">
+  <div class="relative aspect-square mb-4xs md:mb-3xs">
     <div class="hover-3d absolute inset-0">
-      <img
-        src={imageSrc}
-        alt={imageAlt}
-        class="w-full h-full object-cover"
-      />
+      <figure class="max-w-100 w-full h-full">
+        <img src={imageSrc} alt={imageAlt} class="w-full h-full object-cover" />
+      </figure>
       <div></div>
       <div></div>
       <div></div>

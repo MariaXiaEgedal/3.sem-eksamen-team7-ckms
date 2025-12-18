@@ -2,6 +2,7 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import Heading from "../components/Heading.astro";
 import AllWorkshopCard from "../components/AllWorkshopCard.astro";
+import Text from "../components/Text.astro";
 ---
 
 <MainLayout title="Workshops">
@@ -18,10 +19,14 @@ import AllWorkshopCard from "../components/AllWorkshopCard.astro";
       <Heading
         htmlheading="h4"
         size="xsmall"
-        stylingclasses="text-text-dark mb-2xs md:mb-xs"
+        stylingclasses="text-text-dark mb-2xs md:mb-xs max-w-[900px]"
         >Hos CKMS tilbyder vi et frirum for brugere af psykiatrien, hvor vi
         mødes om at være kreative.
       </Heading>
+
+      <Text stylingclasses="mb-2xs md:mb-xs"
+        >Vi tilbyder følgende workshops:</Text
+      >
 
       <AllWorkshopCard />
       <!-- ***************************** End Workshops ***************************** -->
