@@ -1,0 +1,46 @@
+---
+import CardWorkshop from "./CardWorkshop.astro";
+---
+
+<div class="grid grid-cols-2 lg:grid-cols-5 gap-2xs lg:gap-0 mb-xs md:mb-m">
+  <CardWorkshop
+    title="Skrivegrupper"
+    imageSrc="/img/IkonSkrivegrupper.svg"
+    alt="Åben bog"
+    bgColor="bg-workshop-skrivegruppe-card"
+    textColor="text-text-dark"
+    zIndex={5}
+  />
+  <CardWorkshop
+    title="Dramagruppe"
+    imageSrc="/img/IkonDramagruppe.svg"
+    alt="Teatermasker"
+    bgColor="bg-workshop-dramagruppe-card"
+    textColor="text-text-light"
+    zIndex={4}
+  />
+  <CardWorkshop
+    title="Billedkunst"
+    imageSrc="/img/IkonBilledkunst.svg"
+    alt="Male-palette"
+    bgColor="bg-workshop-billedkunst-card"
+    textColor="text-text-dark"
+    zIndex={3}
+  />
+  <CardWorkshop
+    title="Åbent værksted"
+    imageSrc="/img/IkonÅbentværksted.svg"
+    alt="Åben dør"
+    bgColor="bg-workshop-aabentvaerksted-card"
+    textColor="text-text-dark"
+    zIndex={2}
+  />
+  <CardWorkshop
+    title="Film og lyd"
+    imageSrc="/img/IkonFilmlyd.svg"
+    alt="Filmklaptræ"
+    bgColor="bg-workshop-filmlyd-card"
+    textColor="text-text-light"
+    zIndex={1}
+  />
+</div>
